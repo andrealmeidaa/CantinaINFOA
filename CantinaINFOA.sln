@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCantina", "ModelCantina\ModelCantina.csproj", "{40CE5C58-1934-461C-BEA8-FF841973C96F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPricipal", "GUICantina\FormPricipal.csproj", "{A75459C6-A9FD-4094-BC70-4E5DF9D38D53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{40CE5C58-1934-461C-BEA8-FF841973C96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40CE5C58-1934-461C-BEA8-FF841973C96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40CE5C58-1934-461C-BEA8-FF841973C96F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75459C6-A9FD-4094-BC70-4E5DF9D38D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75459C6-A9FD-4094-BC70-4E5DF9D38D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75459C6-A9FD-4094-BC70-4E5DF9D38D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75459C6-A9FD-4094-BC70-4E5DF9D38D53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
