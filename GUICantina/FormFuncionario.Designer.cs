@@ -36,6 +36,7 @@
             this.buttonNovo = new System.Windows.Forms.Button();
             this.buttonGravar = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
+            this.textBoxIDFuncionario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,6 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(218, 20);
             this.textBoxNome.TabIndex = 1;
-            
             // 
             // label2
             // 
@@ -71,52 +71,60 @@
             this.textBoxMatricula.Name = "textBoxMatricula";
             this.textBoxMatricula.Size = new System.Drawing.Size(100, 20);
             this.textBoxMatricula.TabIndex = 4;
-            
             // 
             // dataGridViewFuncionario
             // 
             this.dataGridViewFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewFuncionario.Location = new System.Drawing.Point(16, 107);
             this.dataGridViewFuncionario.Name = "dataGridViewFuncionario";
-            this.dataGridViewFuncionario.Size = new System.Drawing.Size(340, 150);
+            this.dataGridViewFuncionario.Size = new System.Drawing.Size(382, 150);
             this.dataGridViewFuncionario.TabIndex = 5;
-           
+            this.dataGridViewFuncionario.SelectionChanged += new System.EventHandler(this.dataGridViewFuncionario_SelectionChanged);
             // 
             // buttonNovo
             // 
-            this.buttonNovo.Location = new System.Drawing.Point(16, 78);
+            this.buttonNovo.Location = new System.Drawing.Point(53, 78);
             this.buttonNovo.Name = "buttonNovo";
             this.buttonNovo.Size = new System.Drawing.Size(75, 23);
             this.buttonNovo.TabIndex = 6;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = true;
-           
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
             // 
             // buttonGravar
             // 
-            this.buttonGravar.Location = new System.Drawing.Point(97, 78);
+            this.buttonGravar.Location = new System.Drawing.Point(170, 78);
             this.buttonGravar.Name = "buttonGravar";
             this.buttonGravar.Size = new System.Drawing.Size(75, 23);
             this.buttonGravar.TabIndex = 7;
             this.buttonGravar.Text = "Gravar";
             this.buttonGravar.UseVisualStyleBackColor = true;
-            
+            this.buttonGravar.Click += new System.EventHandler(this.buttonGravar_Click);
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(178, 78);
+            this.buttonExcluir.Location = new System.Drawing.Point(290, 78);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
             this.buttonExcluir.TabIndex = 8;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
-            
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
+            // 
+            // textBoxIDFuncionario
+            // 
+            this.textBoxIDFuncionario.Location = new System.Drawing.Point(184, 46);
+            this.textBoxIDFuncionario.Name = "textBoxIDFuncionario";
+            this.textBoxIDFuncionario.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIDFuncionario.TabIndex = 9;
+            this.textBoxIDFuncionario.Visible = false;
             // 
             // FormFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 269);
+            this.ClientSize = new System.Drawing.Size(404, 269);
+            this.Controls.Add(this.textBoxIDFuncionario);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonGravar);
             this.Controls.Add(this.buttonNovo);
@@ -127,7 +135,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormFuncionario";
             this.Text = "Cadastro de Funcionários";
-            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,5 +151,6 @@
         private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.Button buttonGravar;
         private System.Windows.Forms.Button buttonExcluir;
+        private System.Windows.Forms.TextBox textBoxIDFuncionario;
     }
 }
