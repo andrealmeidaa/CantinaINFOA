@@ -84,6 +84,8 @@ namespace GUICantina
                 if (controle.ExcluirCliente(idCliente))
                 {
                     MessageBox.Show("Cliente excluido com sucesso");
+                    novo();
+                    atualizaGrid();
                 }
                 else
                 {

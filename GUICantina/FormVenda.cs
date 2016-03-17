@@ -54,7 +54,7 @@ namespace GUICantina
         private void autocomplete()
         {
             //Autocomplete da caixa de texto referente aos funcionários
-            textBoxCliente.AutoCompleteMode = AutoCompleteMode.Suggest;
+            textBoxCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             textBoxCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
             listaClientes = controleCliente.ListarClientes();
             listaNomeClientes = new AutoCompleteStringCollection();

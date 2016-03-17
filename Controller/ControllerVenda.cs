@@ -62,6 +62,7 @@ namespace Controller
             catch (Exception err)
             {
                 transacao.Rollback();
+                conexao.Close();
                 Console.WriteLine(err.Message);
                 return false;
 
