@@ -40,7 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADODBConnection.cs" />
+    <Compile Include="ControllerCliente.cs" />
+    <Compile Include="ControllerConta.cs" />
     <Compile Include="ControllerFuncionario.cs" />
+    <Compile Include="ControllerProduto.cs" />
+    <Compile Include="ControllerVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

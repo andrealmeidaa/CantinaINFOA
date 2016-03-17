@@ -11,5 +11,11 @@ namespace ModelCantina
         public int IDProduto { get; set; }
         public string Descricao { get; set; }
         public double PrecoUnitario { get; set; }
+
+        //Dessa forma quando referenciar um objeto apresenta a descrição
+        public override string ToString()
+        {
+            return Descricao;
+        }
     }
 }
