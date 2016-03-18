@@ -24,7 +24,7 @@ namespace Controller
                 comando.Parameters.AddWithValue("@idcliente", venda.Cliente.IDCliente);
                 comando.Parameters.AddWithValue("@datavenda", venda.DataVenda);
                 int linhasModificadas = comando.ExecuteNonQuery();
-                if (linhasModificadas == 0)
+                if (linhasModificadas == 0)//Se der erro, desfaz a transação
                 {
                     transacao.Rollback();
                     conexao.Close();

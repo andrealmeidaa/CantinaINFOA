@@ -16,6 +16,7 @@ namespace GUICantina
         private FormCliente formCliente;
         private FormConta formConta;
         private FormVenda formVenda;
+        private FormPagamento formPagamento;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -55,6 +56,15 @@ namespace GUICantina
                 formVenda = new FormVenda();
             }
             formVenda.ShowDialog(this);
+        }
+
+        private void pagamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formPagamento == null)
+            {
+                formPagamento = new FormPagamento();
+            }
+            formPagamento.ShowDialog(this);
         }
     }
 }
