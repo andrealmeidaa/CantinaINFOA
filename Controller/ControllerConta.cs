@@ -29,7 +29,8 @@ namespace Controller
         {
             SqlConnection conexao = ADODBConnection.Connection();
             SqlCommand comando = conexao.CreateCommand();
-            comando.CommandText = "select id_conta,limite from tbl_conta where id_cliente=@idcliente";
+            comando.CommandText = "select id_conta,limite,tbl_cliente.id_cliente,nome_cliente,telefone_cliente from tbl_conta join tbl_cliente" 
+                +" on tbl_conta.id_cliente=tbl_cliente.id_cliente where tbl_conta.id_cliente=@idcliente";
             comando.Parameters.AddWithValue("@idcliente", idCliente);
             conexao.Open();
             Conta conta = null;
@@ -41,15 +42,13 @@ namespace Controller
                     conta = new Conta();
                     conta.IDConta = reader.GetInt32(0);
                     conta.Limite = reader.GetSqlMoney(1).ToDouble();
-                    /*Precisamos agora recuperar a referência ao cliente dessa conta
-                     para isso utilizaremos o controllerCliente
-                     */
-                    conexao.Close();//Precisamos fechar a conexão para que o controller cliente realize a operação
-                    ControllerCliente controleCliente = new ControllerCliente();
-                    conta.Cliente = controleCliente.LocalizarClientePorID(idCliente);
+                    conta.Cliente = new Cliente();
+                    conta.Cliente.IDCliente = reader.GetInt32(2);
+                    conta.Cliente.Nome = reader.GetString(3);
+                    conta.Cliente.Telefone = reader.GetString(4);
+                   
                 }
-                else
-                    conexao.Close();
+                conexao.Close();
                 return conta;
             }
         }
